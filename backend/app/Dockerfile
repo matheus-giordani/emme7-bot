@@ -13,7 +13,6 @@ COPY app.py .
 COPY configs.py .
 COPY startup.py .
 COPY consumer.py .
-COPY credentials/ /app/credentials
 COPY src/ /app/src
 COPY tests/ /app/tests
 

@@ -14,7 +14,6 @@ wheels/
 .python-version
 .DS_Store
 
-# App credentials (do not commit secrets)
-backend/app/credentials/
+
 
 .vscode/
