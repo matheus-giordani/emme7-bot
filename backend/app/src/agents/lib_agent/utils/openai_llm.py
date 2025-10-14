@@ -23,7 +23,7 @@ class OpenAILLM(BaseLLM):
         self.use_open_router = os.getenv("USE_OPEN_ROUTER", "false").lower() == "true"
         if self.use_open_router:
             self.client = OpenAI(api_key=self._api_key, base_url="https://openrouter.ai/api/v1")
-            self.model = "deepseek/deepseek-chat-v3.1:free"
+            self.model = os.getenv("OPENROUTER_MODEL")
         else:
             self.client = OpenAI(api_key=self._api_key)
 
