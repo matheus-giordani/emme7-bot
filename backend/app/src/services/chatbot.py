@@ -232,12 +232,12 @@ def get_chatbot(
 ) -> ChatBot:
     """FastAPI dependency that wires the chatbot with Evolution API credentials."""
     evolution_api_url = os.getenv("EVOLUTION_API_URL")
-    evolution_api_key = os.getenv("EVOLUTION_API_KEY")
+    evolution_api_key = os.getenv("AUTHENTICATION_API_KEY")
     evolution_instance_name = os.getenv("EVOLUTION_INSTANCE_NAME")
 
     assert (
         evolution_api_url and evolution_api_key and evolution_instance_name
-    ), "Variáveis EVOLUTION_API_URL, EVOLUTION_API_KEY e EVOLUTION_INSTANCE_NAME devem estar configuradas no ambiente."
+    ), "Variáveis EVOLUTION_API_URL, AUTHENTICATION_API_KEY e EVOLUTION_INSTANCE_NAME devem estar configuradas no ambiente."
 
     evolution_client = EvolutionClient(
         base_url=evolution_api_url,
