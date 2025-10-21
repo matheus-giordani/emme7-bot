@@ -22,7 +22,7 @@ from src.services.store_routing import resolve_store_contact
 
 def _get_evolution_client() -> EvolutionClient:
     base_url = os.getenv("EVOLUTION_API_URL")
-    api_key = os.getenv("EVOLUTION_API_KEY")
+    api_key = os.getenv("AUTHENTICATION_API_KEY")
     instance_name = os.getenv("EVOLUTION_INSTANCE_NAME")
     if not (base_url and api_key and instance_name):
         raise RuntimeError(
