@@ -3,6 +3,7 @@
 import argparse
 import logging
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from typing import Dict
 import os
 
@@ -56,6 +57,13 @@ app = FastAPI(
     title="Technium API - Agents",
     root_path=ROOT_PATH_BACKEND,
     description="Documentação endpoints dos agentes da Technium",
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS.split(","),
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 app.include_router(user_router)
 app.include_router(evolution_router)
