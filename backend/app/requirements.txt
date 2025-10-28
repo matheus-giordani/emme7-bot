@@ -7,6 +7,7 @@ idna==3.10
 iniconfig==2.1.0
 google-api-python-client==2.154.0
 google-auth==2.37.0
+beautifulsoup4==4.12.3
 openai==1.65.4
 pandas==2.2.3
 psycopg2-binary==2.9.10

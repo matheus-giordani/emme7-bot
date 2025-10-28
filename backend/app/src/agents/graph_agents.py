@@ -1,6 +1,7 @@
-"""ChatBot graph."""
+"""ChatBot graph coordinating the sales agent."""
 
 from typing import Any, Dict, List, Optional
+
 from src.models.user_models import InternalMessageModel
 from src.agents.sales_agent import agent_sales
 
